@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #fffaf0;
+  transition: background-color 1s;
+  /* overflow: hidden; */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-size: 14px;
+  font-family: "ohno-blazeface",sans-serif;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 2em;
+  gap: 1em;
+}
+
+.nav {
+  display: flex;
+  gap: 1em;
+}
+
+.col {
+  display: flex;
+  gap: 1em;
+}
+
+.copy {
+  flex: 1;
+}
+
+.col:nth-child(1) {
+  flex: 2;
+}
+
+.col:nth-child(2) {
+  flex: 5;
+}
+
+.col:nth-child(3) {
+  flex: 3;
+}
+
+p.logo {
+  width: 100%;
+  text-align: right;
+}
+
+.container {
+  position: relative;
+  top: 175px;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  font-family: "ohno-blazeface",sans-serif;
+}
+
+.gallery {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.side-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2em; 
+  align-items: center;
+}
+
+.Audiov-container {
+  width:100%;
+    padding:10em;
+  
+}
+
+.row {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  
+}
+
+.img {
+  width: 80%;
+  height: 80px;
+  cursor: pointer;
+}
+
+.preview {
+  width: 100%;
+  flex: 4;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 2em;
+}
+
+.preview-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: #e3e3e3;
+  overflow: hidden;
+}
+
+.preview-container img {
+  position: absolute;
+}
+
+@media (max-width: 900px) {
+  body {
+    height: 200vh;
+  }
+  .col:nth-child(1),
+  .col:nth-child(2) {
+    display: none;
+  }
+
+  .preview-container {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 5em;
+  }
+}
+
+@media (max-width: 800px) {
+  .video-container {
+    width: 100%;
+  }
+}
+
+h1{
+  font-family: "ohno-blazeface",sans-serif;
+  color:#123524;
+  font-size:6rem;
+   
+  
+}
+h1::before
+{
+  content: attr(data-text);
+  position:absolute;
+  color:#351223;
+  width: 100px;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right: 4px solid #c5a7b6;
+  animation:animate 8s linear infinite;
+  filter:drop-shadow(0 0 20px #c393c4cb) drop-shadow(0 0 50px #c393c4cb); 
+  
+}
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width:0;
+  }
+  70%,90%
+  {
+    width:100%;
+  }
+}
